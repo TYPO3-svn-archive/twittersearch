@@ -1,0 +1,158 @@
+<T3DataStructure>
+	<meta>
+	<langDisable>1</langDisable>
+	<!--  <langChildren>1</langChildren>!-->
+		</meta>
+<sheets>
+	<sDEF>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.sheet_general</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<user_search_andor>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.user_search_andor</label>
+					<config>
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">OR</numIndex>
+								<numIndex index="1">OR</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">AND</numIndex>
+								<numIndex index="1">AND</numIndex>
+							</numIndex>
+						</items>
+					</config>
+				</TCEforms>
+			</user_search_andor>
+			<user_search>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.user_search</label>
+					<config>
+						<type>input</type>
+						<size>30</size>
+					</config>
+				</TCEforms>
+			</user_search>
+			<word_search_andor>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.word_search_andor</label>
+					<config>
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">OR</numIndex>
+								<numIndex index="1">OR</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">AND</numIndex>
+								<numIndex index="1">AND</numIndex>
+							</numIndex>
+						</items>
+					</config>
+				</TCEforms>
+			</word_search_andor>
+			<word_search>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.word_search</label>
+					<config>
+						<type>input</type>
+						<size>30</size>
+					</config>
+				</TCEforms>
+			</word_search>
+			<hash_search_andor>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.hash_search_andor</label>
+					<config>
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">OR</numIndex>
+								<numIndex index="1">OR</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">AND</numIndex>
+								<numIndex index="1">AND</numIndex>
+							</numIndex>
+						</items>
+					</config>
+				</TCEforms>
+			</hash_search_andor>
+			<hash_search>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.hash_search</label>
+					<config>
+						<type>input</type>
+						<size>30</size>
+					</config>
+				</TCEforms>
+			</hash_search>
+			<language>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.language</label>
+					<config>
+						<type>input</type>
+						<size>3</size>
+						<eval>trim</eval>
+					</config>
+				</TCEforms>
+			</language>
+			<own_search>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.own_search</label>
+					<config>
+						<type>input</type>
+						<size>30</size>
+					</config>
+				</TCEforms>
+			</own_search>
+		</el>
+	</ROOT>
+	</sDEF>
+	<sVIEW>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.sheet_view</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<view_fullname>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.view_fullname</label>
+					<config>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</view_fullname>
+			<max_results>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.max_results</label>
+					<config>
+						<type>input</type>
+						<size>3</size>
+						<eval>trim</eval>
+						<default>10</default>
+					</config>
+				</TCEforms>
+			</max_results>
+			<max_results_per_page>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.max_results_per_page</label>
+					<config>
+						<type>input</type>
+						<size>3</size>
+						<eval>trim</eval>
+						<default>5</default>
+					</config>
+				</TCEforms>
+			</max_results_per_page>
+		</el>
+	</ROOT>
+	</sVIEW>
+</sheets>
+</T3DataStructure>

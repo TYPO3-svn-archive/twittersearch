@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>language labels for twittersearch BE forms</description>
+		<type>database</type>
+		<csh_table></csh_table>
+		<fileId>EXT:twittersearch/locallang_tca.xml</fileId>
+		<labelContext type="array">
+		</labelContext>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="twittersearch.pi_flexform.sheet_general">Search config</label>
+			<label index="twittersearch.pi_flexform.user_search">Search for user (comma separated)</label>
+			<label index="twittersearch.pi_flexform.user_search_andor">Search for user (Operator)</label>
+			<label index="twittersearch.pi_flexform.word_search">Search for words (comma separated)</label>
+			<label index="twittersearch.pi_flexform.word_search_andor">Search for words (Operator)</label>
+			<label index="twittersearch.pi_flexform.hash_search">Search for hashes (#, comma separated)</label>
+			<label index="twittersearch.pi_flexform.hash_search_andor">Search for hashes (Operator)</label>
+			<label index="twittersearch.pi_flexform.language">Language of the results (de, en, fr)</label>
+			<label index="twittersearch.pi_flexform.max_results">Maximum of displayed results</label>
+			<label index="twittersearch.pi_flexform.max_results_per_page">Results per page</label>
+			<label index="twittersearch.pi_flexform.own_search">Own twitter search (please copy url after extended search) http://search.twitter.com/advanced</label>
+			<label index="twittersearch.pi_flexform.format">Results in format json or atom (XML)</label>
+			<label index="twittersearch.pi_flexform.lang">Search only in language</label>
+			<label index="twittersearch.pi_flexform.sheet_view">View</label>
+			<label index="twittersearch.pi_flexform.view_fullname">Show full twitter name</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="twittersearch.pi_flexform.sheet_general">Suchkonfiguration</label>
+			<label index="twittersearch.pi_flexform.user_search">Suche nach Benutzernamen, kommagetrennt</label>
+			<label index="twittersearch.pi_flexform.user_search_andor">Suche nach Benutzernamen (Operator)</label>
+			<label index="twittersearch.pi_flexform.word_search">Suche nach Wörtern, kommagetrennt</label>
+			<label index="twittersearch.pi_flexform.word_search_andor">Suche nach Wörtern (Operator)</label>
+			<label index="twittersearch.pi_flexform.hash_search">Suche nach Hashes (#), kommagetrennt</label>
+			<label index="twittersearch.pi_flexform.hash_search_andor">Suche nach Hashes (Operator)</label>
+			<label index="twittersearch.pi_flexform.language">Sprache der Resultate (de, en, fr)</label>
+			<label index="twittersearch.pi_flexform.max_results">Maximale Anzahl von Ergebnissen</label>
+			<label index="twittersearch.pi_flexform.max_results_per_page">Ergebnisse pro Seite</label>
+			<label index="twittersearch.pi_flexform.own_search">Eigene Twitter Suche (bitte URL nach der Erweiterten Suche kopieren) http://search.twitter.com/advanced</label>
+			<label index="twittersearch.pi_flexform.format">Ergebnisse im Format JSON oder Atom (XML)</label>
+			<label index="twittersearch.pi_flexform.lang">Nur in folgender Sprache suchen</label>
+			<label index="twittersearch.pi_flexform.sheet_view">Ansicht</label>
+			<label index="twittersearch.pi_flexform.view_fullname">Zeige vollen Twitternamen</label>
+		</languageKey>
+	</data>
+</T3locallang>
