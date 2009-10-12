@@ -1,0 +1,22 @@
+(add new changes on top of this file)
+
+09-10-10 Thomas Loeffler <typo3@tomalo.de>
+
+   * Fixed Bug: start simplexml_load_file() with @ for not displaying errors
+   * Feature (0001): Exclude users from twittersearch by placing an "-" before username in the plugin (thx @ Franz Ripfel)
+   * added debug functionality for easy developing
+   * Release (0.2.0)
+   
+09-07-31 Thomas Loeffler <typo3@tomalo.de>
+
+   * Fixed Bug: page browser is not working in some cases
+   * Release (0.1.2)
+   
+09-07-14 Thomas Loeffler <typo3@tomalo.de>
+
+   * Fixed XSS vulnerability (thx @ TYPO3 Security Team)
+   * Release (0.1.1)
+
+09-05-06 Thomas Loeffler  <typo3@tomalo.de>
+
+	* Initial release (0.1.0)

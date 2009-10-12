@@ -1,0 +1,24 @@
+plugin.tx_twittersearch_pi1 {
+	_CSS_DEFAULT_STYLE (
+		div.tx-twittersearch-pi1 ul.listing {
+			float: left;
+			width: 100%;
+		}	
+		div.tx-twittersearch-pi1 ul.listing li.entry {
+			min-height: 58px; 
+			list-style-type: none; 
+			border: #AAA 1px solid; 
+			padding: 5px; 
+			margin-bottom: 5px;
+		}	
+		div.tx-twittersearch-pi1 ul.listing li.entry div.avatar {
+			float: left; 
+			padding: 0 5px 0 0;
+		}
+		div.tx-twittersearch-pi1 ul.listing li.entry span.published {
+			color: #AAA;
+		}
+	)
+	
+	debug = 0
+}
