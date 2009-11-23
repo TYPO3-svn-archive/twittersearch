@@ -48,7 +48,6 @@ class tx_twittersearch_pi1 extends tslib_pibase {
 		$this->conf=$conf;
 		$this->pi_setPiVarDefaults();
 		$this->pi_loadLL();
-		$this->pi_USER_INT_obj=1;	// Configuring so caching is not expected. This value means that no cHash params are ever set. We do this, because it's a USER_INT object!
 		$this->pi_initPIflexForm();
 		
 		$this->getFFconfig();
@@ -68,7 +67,7 @@ class tx_twittersearch_pi1 extends tslib_pibase {
 
 		if (defined('T3MOOTOOLS')) {
 			tx_t3mootools::addMooJS();
-			$content = '<script type="text/javascript" src="typo3conf/ext/twittersearch/res/js/twittersearch.js"></script>';
+			$GLOBALS['TSFE']->additionalHeaderData[$this->extKey] = '<script type="text/javascript" src="typo3conf/ext/twittersearch/res/js/twittersearch.js"></script>';
 		}
 
 		$this->max_results_per_page = ($this->conf['sVIEW.']['max_results_per_page']?$this->conf['sVIEW.']['max_results_per_page']:'5');
@@ -315,25 +314,27 @@ class tx_twittersearch_pi1 extends tslib_pibase {
 		if ($firstPage) {
 			$markerArray['###FIRST_PAGE###'] = '&nbsp;';
 			$markerArray['###PREV_PAGE###'] = '&nbsp;';
-			$markerArray['###NEXT_PAGE###'] = $this->cObj->typolink($this->pi_getLL('nextPage'), array('parameter' => $GLOBALS['TSFE']->id, 'additionalParams' => '&'.$this->prefixId.'[page]='.($page + 1)));
-			$markerArray['###LAST_PAGE###'] = $this->cObj->typolink($this->pi_getLL('lastPage'), array('parameter' => $GLOBALS['TSFE']->id, 'additionalParams' => '&'.$this->prefixId.'[page]='.($lastPageNumber)));
+			$markerArray['###NEXT_PAGE###'] = $this->pi_linkTP_keepPIvars($this->pi_getLL('nextPage'), array('page' => $page + 1), TRUE);
+			$markerArray['###LAST_PAGE###'] = $this->pi_linkTP_keepPIvars($this->pi_getLL('lastPage'), array('page' => $lastPageNumber), TRUE);
+			#$markerArray['###NEXT_PAGE###'] = $this->cObj->typolink($this->pi_getLL('nextPage'), array('parameter' => $GLOBALS['TSFE']->id, 'additionalParams' => '&'.$this->prefixId.'[page]='.($page + 1)));
+			#$markerArray['###LAST_PAGE###'] = $this->cObj->typolink($this->pi_getLL('lastPage'), array('parameter' => $GLOBALS['TSFE']->id, 'additionalParams' => '&'.$this->prefixId.'[page]='.($lastPageNumber)));
 		} elseif ($lastPage) {
-			$markerArray['###FIRST_PAGE###'] = $this->cObj->typolink($this->pi_getLL('firstPage'), array('parameter' => $GLOBALS['TSFE']->id));
-			$markerArray['###PREV_PAGE###'] = $this->cObj->typolink($this->pi_getLL('prevPage'), array('parameter' => $GLOBALS['TSFE']->id, 'additionalParams' => '&'.$this->prefixId.'[page]='.($page - 1)));
+			$markerArray['###FIRST_PAGE###'] = $this->pi_linkTP_keepPIvars($this->pi_getLL('firstPage'), array('page' => FALSE), TRUE);
+			$markerArray['###PREV_PAGE###'] = $this->pi_linkTP_keepPIvars($this->pi_getLL('prevPage'), array('page' => $page - 1), TRUE);
 			$markerArray['###NEXT_PAGE###'] = '&nbsp;';
 			$markerArray['###LAST_PAGE###'] = '&nbsp;';
 		} else {
-			$markerArray['###FIRST_PAGE###'] = $this->cObj->typolink($this->pi_getLL('firstPage'), array('parameter' => $GLOBALS['TSFE']->id));
+			$markerArray['###FIRST_PAGE###'] = $this->pi_linkTP_keepPIvars($this->pi_getLL('firstPage'), array('page' => FALSE), TRUE);
 			// 091010: do not show parameter if page 1
 			// begin
-			if (($page - 1) == 1) {
-				$markerArray['###PREV_PAGE###'] = $this->cObj->typolink($this->pi_getLL('prevPage'), array('parameter' => $GLOBALS['TSFE']->id));
+			if (($page - 1) === 1) {		
+				$markerArray['###PREV_PAGE###'] = $this->pi_linkTP_keepPIvars($this->pi_getLL('prevPage'), array('page' => FALSE), TRUE);
 			} else {
-				$markerArray['###PREV_PAGE###'] = $this->cObj->typolink($this->pi_getLL('prevPage'), array('parameter' => $GLOBALS['TSFE']->id, 'additionalParams' => '&'.$this->prefixId.'[page]='.($page - 1)));
+				$markerArray['###PREV_PAGE###'] = $this->pi_linkTP_keepPIvars($this->pi_getLL('prevPage'), array('page' => $page - 1), TRUE);
 			}
 			// end
-			$markerArray['###NEXT_PAGE###'] = $this->cObj->typolink($this->pi_getLL('nextPage'), array('parameter' => $GLOBALS['TSFE']->id, 'additionalParams' => '&'.$this->prefixId.'[page]='.($page + 1)));
-			$markerArray['###LAST_PAGE###'] = $this->cObj->typolink($this->pi_getLL('lastPage'), array('parameter' => $GLOBALS['TSFE']->id, 'additionalParams' => '&'.$this->prefixId.'[page]='.($lastPageNumber)));
+			$markerArray['###NEXT_PAGE###'] = $this->pi_linkTP_keepPIvars($this->pi_getLL('nextPage'), array('page' => $page + 1), TRUE);
+			$markerArray['###LAST_PAGE###'] = $this->pi_linkTP_keepPIvars($this->pi_getLL('lastPage'), array('page' => $lastPageNumber), TRUE);
 		}
 		$firstResult = (($page - 1) * $this->max_results_per_page) + 1;
 		$lastResult = $firstResult + $this->max_results_per_page - 1;

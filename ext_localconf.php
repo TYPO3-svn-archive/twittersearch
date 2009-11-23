@@ -8,5 +8,5 @@ t3lib_extMgm::addTypoScript($_EXTKEY,'editorcfg','
 
 $TYPO3_CONF_VARS['FE']['eID_include'][$_EXTKEY] = 'EXT:'.$_EXTKEY.'/twittersearch.php';
 
-t3lib_extMgm::addPItoST43($_EXTKEY,'pi1/class.tx_twittersearch_pi1.php','_pi1','list_type',0);
+t3lib_extMgm::addPItoST43($_EXTKEY,'pi1/class.tx_twittersearch_pi1.php','_pi1','list_type',1);
 ?>
