@@ -1,5 +1,9 @@
 (add new changes on top of this file)
 
+09-11-23 Thomas Loeffler <typo3@tomalo.de>
+
+   * Added caching functionality (changed from USER_INT to USER)
+
 09-10-10 Thomas Loeffler <typo3@tomalo.de>
 
    * Fixed Bug: start simplexml_load_file() with @ for not displaying errors
