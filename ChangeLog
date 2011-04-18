@@ -4,6 +4,7 @@
 
 	* Kicked out mootools integration
 	* Kicked out own header of plugin
+	* Changed typoscript from automatic inclusion to manual inclusion in templates
 
 01-03-09 Thomas Loeffler <typo3@tomalo.de>
 

@@ -9,5 +9,8 @@ $TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_pi1']='pi_fle
 
 t3lib_extMgm::addPlugin(array('LLL:EXT:twittersearch/locallang_db.xml:tt_content.list_type_pi1', $_EXTKEY.'_pi1'),'list_type');
 
+	// initialize static extension templates
+t3lib_extMgm::addStaticFile($_EXTKEY,'res/static/','Twittersearch settings');
+
 
 ?>
