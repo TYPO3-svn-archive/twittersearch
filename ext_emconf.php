@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext "twittersearch".
 #
-# Auto generated 18-04-2011 12:39
+# Auto generated 18-04-2011 15:49
 #
 # Manual updates:
 # Only the data in the array - everything else is removed by next
@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'Search for users, hashes and words in the twitterverse and outputs an list of tweets.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '0.3.3',
+	'version' => '0.4.0',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
@@ -40,7 +40,9 @@ $EM_CONF[$_EXTKEY] = array(
 		'suggests' => array(
 		),
 	),
-	'_md5_values_when_last_written' => 'a:17:{s:9:"ChangeLog";s:4:"46e9";s:10:"README.txt";s:4:"ee2d";s:12:"ext_icon.gif";s:4:"18c5";s:17:"ext_localconf.php";s:4:"8182";s:14:"ext_tables.php";s:4:"d958";s:24:"ext_typoscript_setup.txt";s:4:"0ab3";s:15:"flexform_ds.xml";s:4:"f506";s:16:"locallang_db.xml";s:4:"864a";s:17:"locallang_tca.xml";s:4:"11c8";s:14:"doc/manual.sxw";s:4:"42a0";s:19:"doc/wizard_form.dat";s:4:"b564";s:20:"doc/wizard_form.html";s:4:"d99a";s:34:"pi1/class.tx_twittersearch_pi1.php";s:4:"0e10";s:17:"pi1/locallang.xml";s:4:"82d9";s:29:"res/js/mootools-core-1.2.4.js";s:4:"e30c";s:23:"res/js/twittersearch.js";s:4:"c0a7";s:23:"res/templates/list.html";s:4:"68ec";}',
+	'_md5_values_when_last_written' => 'a:17:{s:9:"ChangeLog";s:4:"4cc3";s:10:"README.txt";s:4:"ee2d";s:12:"ext_icon.gif";s:4:"18c5";s:17:"ext_localconf.php";s:4:"8182";s:14:"ext_tables.php";s:4:"b5ec";s:15:"flexform_ds.xml";s:4:"2d2c";s:16:"locallang_db.xml";s:4:"864a";s:17:"locallang_tca.xml";s:4:"11c8";s:14:"doc/manual.sxw";s:4:"42a0";s:19:"doc/wizard_form.dat";s:4:"b564";s:20:"doc/wizard_form.html";s:4:"d99a";s:34:"pi1/class.tx_twittersearch_pi1.php";s:4:"6d87";s:17:"pi1/locallang.xml";s:4:"82d9";s:29:"res/js/mootools-core-1.2.4.js";s:4:"e30c";s:23:"res/js/twittersearch.js";s:4:"c0a7";s:20:"res/static/setup.txt";s:4:"7e86";s:23:"res/templates/list.html";s:4:"d25e";}',
+	'suggests' => array(
+	),
 );
 
 ?>
