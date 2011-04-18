@@ -1,25 +1,50 @@
 (add new changes on top of this file)
 
-09-11-23 Thomas Loeffler <typo3@tomalo.de>
+18-04-11 Thomas Loeffler <typo3@tomalo.de>
 
-   * Added caching functionality (changed from USER_INT to USER)
+	* Kicked out mootools integration
+	* Kicked out own header of plugin
+	* Changed typoscript from automatic inclusion to manual inclusion in templates
+
+01-03-09 Thomas Loeffler <typo3@tomalo.de>
+
+	* updated manual
+	* Release (0.3.3)
+
+10-02-09 Thomas Loeffler <typo3@tomalo.de>
+
+	* added flexform configuration for mootools and utf8_decode()
+	* Release (0.3.2)
+
+09-12-29 Thomas Loeffler <typo3@tomalo.de>
+
+	* changed xml import to t3lib_div::getUrl for using curl if configured (thx @ Mario Rossi - snowflake)
+	* Release (0.3.1)
+
+09-12-29 Thomas Loeffler <typo3@tomalo.de>
+
+	* Release (0.3.0)
+
+09-12-19 Thomas Loeffler <typo3@tomalo.de>
+
+	* added caching for tweet listing, please set caching time on page record (e.g. 5 minutes)
 
 09-10-10 Thomas Loeffler <typo3@tomalo.de>
 
-   * Fixed Bug: start simplexml_load_file() with @ for not displaying errors
-   * Feature (0001): Exclude users from twittersearch by placing an "-" before username in the plugin (thx @ Franz Ripfel)
-   * added debug functionality for easy developing
-   * Release (0.2.0)
+	* Fixed Bug: start simplexml_load_file() with @ for not displaying errors
+	* Feature (0001): Exclude users from twittersearch by placing an "-" before username in the plugin (thx @ Franz Ripfel)
+	* added debug functionality for easy developing
+	* Release (0.2.0)
    
 09-07-31 Thomas Loeffler <typo3@tomalo.de>
 
-   * Fixed Bug: page browser is not working in some cases
-   * Release (0.1.2)
+	* Fixed Bug: page browser is not working in some cases
+	* Release (0.1.2)
    
 09-07-14 Thomas Loeffler <typo3@tomalo.de>
 
-   * Fixed XSS vulnerability (thx @ TYPO3 Security Team)
-   * Release (0.1.1)
+	* Fixed XSS vulnerability (thx @ TYPO3 Security Team)
+	* Release (0.1.1)
 
 09-05-06 Thomas Loeffler  <typo3@tomalo.de>
 

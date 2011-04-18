@@ -3,22 +3,24 @@ plugin.tx_twittersearch_pi1 {
 		div.tx-twittersearch-pi1 ul.listing {
 			float: left;
 			width: 100%;
-		}	
+		}
 		div.tx-twittersearch-pi1 ul.listing li.entry {
-			min-height: 58px; 
-			list-style-type: none; 
-			border: #AAA 1px solid; 
-			padding: 5px; 
+			min-height: 58px;
+			list-style-type: none;
+			border: #AAA 1px solid;
+			padding: 5px;
 			margin-bottom: 5px;
-		}	
+		}
 		div.tx-twittersearch-pi1 ul.listing li.entry div.avatar {
-			float: left; 
+			float: left;
 			padding: 0 5px 0 0;
 		}
 		div.tx-twittersearch-pi1 ul.listing li.entry span.published {
 			color: #AAA;
 		}
 	)
-	
+
+	templatefile = EXT:twittersearch/res/templates/list.html
+
 	debug = 0
 }

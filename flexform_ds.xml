@@ -154,5 +154,23 @@
 		</el>
 	</ROOT>
 	</sVIEW>
+	<sCONFIG>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.sheet_config</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<force_utf8_decode>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.config_utf8decode</label>
+					<config>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</force_utf8_decode>
+		</el>
+	</ROOT>
+	</sCONFIG>	
 </sheets>
 </T3DataStructure>

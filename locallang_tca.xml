@@ -25,6 +25,10 @@
 			<label index="twittersearch.pi_flexform.lang">Search only in language</label>
 			<label index="twittersearch.pi_flexform.sheet_view">View</label>
 			<label index="twittersearch.pi_flexform.view_fullname">Show full twitter name</label>
+			<label index="twittersearch.pi_flexform.sheet_config">Config</label>
+			<label index="twittersearch.pi_flexform.config_mootools">Use mootools</label>
+			<label index="twittersearch.pi_flexform.config_init_mootools">Initializes mootools core (check only if mootools not yet initialized!)</label>
+			<label index="twittersearch.pi_flexform.config_utf8decode">Force utf8_decode() in template</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="twittersearch.pi_flexform.sheet_general">Suchkonfiguration</label>
@@ -42,6 +46,10 @@
 			<label index="twittersearch.pi_flexform.lang">Nur in folgender Sprache suchen</label>
 			<label index="twittersearch.pi_flexform.sheet_view">Ansicht</label>
 			<label index="twittersearch.pi_flexform.view_fullname">Zeige vollen Twitternamen</label>
+			<label index="twittersearch.pi_flexform.sheet_config">Konfiguration</label>
+			<label index="twittersearch.pi_flexform.config_mootools">Nutze Mootools</label>
+			<label index="twittersearch.pi_flexform.config_init_mootools">Bindet Mootools Core ein (nur, wenn es nicht schon eingebunden wurde!)</label>
+			<label index="twittersearch.pi_flexform.config_utf8decode">Nutzt utf8_decode() im Template</label>
 		</languageKey>
 	</data>
 </T3locallang>
