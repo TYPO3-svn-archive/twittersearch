@@ -19,6 +19,8 @@ plugin.tx_twittersearch_pi1 {
 			color: #AAA;
 		}
 	)
+
+	templatefile = EXT:twittersearch/res/templates/list.html
 	
 	debug = 0
 }
