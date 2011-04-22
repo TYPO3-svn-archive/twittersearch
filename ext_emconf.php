@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext "twittersearch".
 #
-# Auto generated 18-04-2011 15:49
+# Auto generated 22-04-2011 12:24
 #
 # Manual updates:
 # Only the data in the array - everything else is removed by next
@@ -15,13 +15,13 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'Search for users, hashes and words in the twitterverse and outputs an list of tweets.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '0.4.0',
+	'version' => '1.0.0',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
 	'loadOrder' => '',
 	'module' => '',
-	'state' => 'beta',
+	'state' => 'stable',
 	'uploadfolder' => 0,
 	'createDirs' => '',
 	'modify_tables' => '',
