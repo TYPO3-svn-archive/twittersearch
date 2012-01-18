@@ -1,5 +1,10 @@
 (add new changes on top of this file)
 
+18-01-12 Thomas Loeffler <typo3@tomalo.de>
+
+	* Removed js completely
+	* Removed "own search" for advanced search because of changed and therefore incompatible twitter search url
+
 18-04-11 Thomas Loeffler <typo3@tomalo.de>
 
 	* Kicked out mootools integration
