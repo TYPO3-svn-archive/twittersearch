@@ -102,7 +102,8 @@
 					</config>
 				</TCEforms>
 			</language>
-			<own_search>
+			<!-- @deprecated because the official twitter search changed the url and it isn't easy to parse this. -->
+			<!--<own_search>
 				<TCEforms>
 					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.own_search</label>
 					<config>
@@ -110,7 +111,7 @@
 						<size>30</size>
 					</config>
 				</TCEforms>
-			</own_search>
+			</own_search>-->
 		</el>
 	</ROOT>
 	</sDEF>

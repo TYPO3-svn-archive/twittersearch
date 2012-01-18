@@ -201,6 +201,7 @@ class tx_twittersearch_pi1 extends tslib_pibase {
 			$url .= '&rpp=' . $this->conf['sVIEW.']['max_results'];
 		}
 		// check if own search is valid url and build url for the right search outpot (json, atom)
+		// @deprecated because the official twitter search changed the url and it isn't easy to parse this.
 		if ($this->conf['sDEF.']['own_search'] and preg_match("/^http:\/\/[0-9a-z]([-.]?[0-9a-z])*.[a-z]{2,4}$^/", $this->conf['sDEF.']['own_search']) !== FALSE) {
 			$url = preg_replace('/search\?/', 'search.' . ($this->conf['sDEF.']['format'] ? $this->conf['sDEF.']['format'] : 'atom') . '?', $this->conf['sDEF.']['own_search']);
 		}
