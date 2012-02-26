@@ -19,6 +19,9 @@
 			<label index="lastPage">last</label>
 			<label index="page">Page</label>
 			<label index="of">of</label>
+			<label index="reply">reply</label>
+			<label index="retweet">retweet</label>
+			<label index="favorite">favorite</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="list_mode_1">Mode 1</label>
@@ -34,6 +37,9 @@
 			<label index="lastPage">last</label>
 			<label index="page">Seite</label>
 			<label index="of">von</label>
+			<label index="reply">antworten</label>
+			<label index="retweet">retweeten</label>
+			<label index="favorite">favorisieren</label>
 		</languageKey>
 	</data>
 </T3locallang>

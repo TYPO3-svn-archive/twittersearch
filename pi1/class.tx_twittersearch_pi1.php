@@ -35,6 +35,9 @@ class tx_twittersearch_pi1 extends tslib_pibase {
 	var $extKey = 'twittersearch'; // The extension key.
 	var $debug = FALSE;
 
+	var $max_results_per_page = 0;
+	var $useUtf8Decode = FALSE;
+
 	/**
 	 * The main method of the PlugIn
 	 *
@@ -62,10 +65,20 @@ class tx_twittersearch_pi1 extends tslib_pibase {
 		$this->useUtf8Decode = ($this->conf['sCONFIG.']['force_utf8_decode'] ? $this->conf['sCONFIG.']['force_utf8_decode'] : FALSE);
 		$temp = '';
 		if ($tweets = $this->buildSearchParts()) {
+			$pagebrowser = FALSE;
 			// get first block and replace marker: 
 			$template_part = $this->cObj->getSubpart($template, '###TEMPLATE_LIST###');
 			$tweet_template = $this->cObj->getSubpart($template_part, '###TWEET###');
 			foreach ($tweets as $tweet) {
+				if (!$this->conf['sVIEW.']['show_actions']) {
+#					$actionContent = $this->cObj->getSubpart($tweet_template, '###TWEETACTIONS###');
+#					$actionContent = $this->cObj->substituteMarker($actionContent, '###REPLY###', $tweet['reply']);
+#					$actionContent = $this->cObj->substituteMarker($actionContent, '###RETWEET###', $tweet['retweet']);
+#					$actionContent = $this->cObj->substituteMarker($actionContent, '###FAVORITE###', $tweet['favorite']);
+#					$tweet_template = $this->cObj->substituteSubpart($tweet_template, '###TWEETACTIONS###', $actionContent);
+#				} else {
+					$tweet_template = $this->cObj->substituteSubpart($tweet_template, '###TWEETACTIONS###', '');
+				}
 				$temp .= $this->cObj->substituteMarkerArray($tweet_template, $tweet, '###|###', TRUE, TRUE);
 			}
 			$main_content = $this->cObj->substituteSubpart($template_part, '###TWEET###', $temp);
@@ -130,7 +143,7 @@ class tx_twittersearch_pi1 extends tslib_pibase {
 	 *  Building the url for the search
 	 *
 	 * @param	string		$part: url parts for the search
-	 * @return	Every single tweet
+	 * @return	array Every single tweet
 	 */
 	function makeUrl($part) {
 		$base_url = 'http://search.twitter.com/search.'; // base url
@@ -209,9 +222,10 @@ class tx_twittersearch_pi1 extends tslib_pibase {
 		$this->page = intval($this->piVars['page']);
 		// 100106: added getUrl for TYPO3 selection of getting URL (e.g. curl, file_get_contents)
 		// thx @ Mario Rossi - snowflake
+		$report = '';
 		$xml_content = t3lib_div::getUrl($url, 0, false, $report);
 		if ($this->debug) {
-			t3lib_div::debug($report);
+			t3lib_utility_Debug::debug($report);
 		}
 		if ($xml_object = @simplexml_load_string($xml_content)) { // 091010: added an @ for "un"-displaying errors
 			$this->global_result['title'] = (string) $xml_object->title;
@@ -257,12 +271,19 @@ class tx_twittersearch_pi1 extends tslib_pibase {
 			$temp = t3lib_div::trimExplode(' (', $temp);
 			$twitter_name = $temp[0];
 		}
+		$gettingId = t3lib_div::trimExplode(':', $entry->id);
+		$result['id'] = array_pop($gettingId);
 		$result['title'] = (string) $entry->title;
 		$result['content'] = $this->whatAboutUtf8((string) $entry->content);
 		$result['author'] = $this->cObj->typolink($twitter_name, array('parameter' => (string) $entry->author->uri . ' _blank'));
 		$result['author_name'] = $twitter_name;
 		$result['author_uri'] = (string) $entry->author->uri;
 		$result['avatar'] = ($entry->link[1]['rel'] == 'image') ? $entry->link[1]['href'] : '';
+		if ($this->conf['sVIEW.']['show_actions']) {
+			$result['reply'] = $this->cObj->typolink($this->pi_getLL('reply', 'reply'), array('parameter' => 'https://twitter.com/intent/tweet?in_reply_to='.$result['id'].' _blank'));
+			$result['retweet'] = $this->cObj->typolink($this->pi_getLL('retweet', 'retweet'), array('parameter' => 'https://twitter.com/intent/retweet?tweet_id='.$result['id'].' _blank'));
+			$result['favorite'] = $this->cObj->typolink($this->pi_getLL('favorite', 'favorite'), array('parameter' => 'https://twitter.com/intent/favorite?tweet_id='.$result['id'].' _blank'));
+		}
 		return $result;
 	}
 

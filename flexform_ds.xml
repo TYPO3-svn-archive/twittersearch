@@ -130,6 +130,14 @@
 					</config>
 				</TCEforms>
 			</view_fullname>
+			<show_actions>
+				<TCEforms>
+					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.show_actions</label>
+					<config>
+						<type>check</type>
+					</config>
+				</TCEforms>
+			</show_actions>
 			<max_results>
 				<TCEforms>
 					<label>LLL:EXT:twittersearch/locallang_tca.xml:twittersearch.pi_flexform.max_results</label>

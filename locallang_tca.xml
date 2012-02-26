@@ -25,6 +25,7 @@
 			<label index="twittersearch.pi_flexform.lang">Search only in language</label>
 			<label index="twittersearch.pi_flexform.sheet_view">View</label>
 			<label index="twittersearch.pi_flexform.view_fullname">Show full twitter name</label>
+			<label index="twittersearch.pi_flexform.show_actions">Show reply, retweet and favorite links</label>
 			<label index="twittersearch.pi_flexform.sheet_config">Config</label>
 			<label index="twittersearch.pi_flexform.config_mootools">Use mootools</label>
 			<label index="twittersearch.pi_flexform.config_init_mootools">Initializes mootools core (check only if mootools not yet initialized!)</label>
@@ -46,6 +47,7 @@
 			<label index="twittersearch.pi_flexform.lang">Nur in folgender Sprache suchen</label>
 			<label index="twittersearch.pi_flexform.sheet_view">Ansicht</label>
 			<label index="twittersearch.pi_flexform.view_fullname">Zeige vollen Twitternamen</label>
+			<label index="twittersearch.pi_flexform.show_actions">Zeige Antwort-, Retweet- und Favorisier-Links</label>
 			<label index="twittersearch.pi_flexform.sheet_config">Konfiguration</label>
 			<label index="twittersearch.pi_flexform.config_mootools">Nutze Mootools</label>
 			<label index="twittersearch.pi_flexform.config_init_mootools">Bindet Mootools Core ein (nur, wenn es nicht schon eingebunden wurde!)</label>

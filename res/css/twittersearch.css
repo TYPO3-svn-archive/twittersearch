@@ -1,0 +1,50 @@
+div.tx-twittersearch-pi1 ul.listing {
+	float: left;
+	width: 100%;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry {
+	min-height: 58px;
+	list-style-type: none;
+	border: #AAA 1px solid;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry div.avatar {
+	float: left;
+	padding: 0 5px 0 0;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry span.published {
+	color: #AAA;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry div.actions ul li {
+	list-style-type: none;
+	float: left;
+	padding-left: 30px;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry div.actions ul li.reply {
+	padding-left: 0;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry div.actions ul li a {
+	background-image: url('../img/everything-spritev2.png');
+	background-repeat: no-repeat;
+	padding-left: 20px;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry div.actions ul li.reply a {
+	background-position: 0px -3px;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry div.actions ul li.reply a:hover {
+	background-position: 0px -102px;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry div.actions ul li.retweet a {
+	background-position: 0px -502px;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry div.actions ul li.retweet a:hover {
+	background-position: 0px -602px;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry div.actions ul li.favorite a {
+	background-position: 0px -202px;
+}
+div.tx-twittersearch-pi1 ul.listing li.entry div.actions ul li.favorite a:hover {
+	background-position: 0px -302px;
+}
+
